@@ -3,6 +3,7 @@ import tornadofx.*
 import kotlin.reflect.KClass
 
 class Application : App() {
+    val foo: Int = 1
     override val primaryView: KClass<out UIComponent> = Field::class
 
     override fun start(stage: Stage) {
