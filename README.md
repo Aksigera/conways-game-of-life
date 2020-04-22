@@ -1,0 +1,1 @@
+This is hackathon project with implementation of Conway's game of life in Kotlin
