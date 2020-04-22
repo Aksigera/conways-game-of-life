@@ -1,1 +1,1 @@
-This is hackathon project with implementation of Conway's game of life in Kotlin
+This is sample project with try to implement Conway's game of life in Kotlin
