@@ -1,1 +1,1 @@
-BAR This is sample project with try to implement Conway's game of life in Kotlin
+BAZ This is sample project with try to implement Conway's game of life in Kotlin
