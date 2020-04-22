@@ -42,17 +42,11 @@ class Game {
 
     private fun isAlive(cell: Cell): Boolean = previousGeneration[cell.row]?.contains(cell.col) == true
 
-    private fun registerNeighbours(cell: Cell) {
-        for (deltaRow in -1..1) {                      // borderline cases!!!
-            val row = cell.row + deltaRow
+    private fun registerNeighbours(cell: Cell) = (-1..1).forEach { deltaRow ->
+        val row = cell.row + deltaRow
+        if (candidates[row] == null) candidates[row] = HashMap()
 
-            if (candidates[row] == null) candidates[row] = HashMap()
-
-            for (deltaCol in -1..1) {                      // borderline cases!!!
-                val col = cell.col + deltaCol
-
-                candidates[row]!![col] = if (candidates[row]!![col] == null) 1 else candidates[row]!![col]!! + 1
-            }
-        }
+        (-1..1).map { cell.col + it }
+                .forEach { candidates[row]!![it] = if (candidates[row]!![it] == null) 1 else candidates[row]!![it]!! + 1 }
     }
 }
